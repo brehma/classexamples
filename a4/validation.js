@@ -204,10 +204,3 @@ if (country === "USA"){
 }
 //Zipcode is OK. For example: validZipcode = true;
     }
-7:52
-.warning {
-    color:red;
-}
-#errorMessages{
-color:red;
-}
