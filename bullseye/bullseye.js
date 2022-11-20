@@ -11,6 +11,7 @@ while (i <= 11) {
     i++;
 }
 
-// Write the message into the page
+// Write The Message Into The Page
+// Must Be Last Or It Will Not Propagate The Table
 var el = document.getElementById('blackboard');
 el.innerHTML = msg;
