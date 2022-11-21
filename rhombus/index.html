@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="stylesheet.css" />
+    <meta name="description" content="Artifact 3 - Rhombus Example">
+    <meta charset="utf-8">
+    <title>Artifact 3 - Rhombus</title>
+  </head>
+  <body>
+    <label>What is the size of Rhombus?</label><br>
+    <input type="text" id="rHeight" value="5" size="5">
+    <br>
+    
+    <label>Choose color for Even position</label><br>
+    <select id="colorEven">
+    <option value="#1CE41B">Green</option>
+    <option value="#1BC1E4">Lightblue</option>
+    <option value="#7F33A7">Purple</option>
+    </select>
+    <br>
+
+    <label>Choose color for Odd position</label><br>
+    <select id="colorOdd">
+    <option value="#FF0099">Pink</option>
+    <option value="#33FF00">Green</option>
+    <option value="#E55884">lightpink</option>
+    </select>
+    <br>
+    
+    <label>Choose symbol for Rhombus</label>
+    <select id="symbol">
+    <option value="\">\</option>
+    <option value="/">/</option>
+    <option value="?">?</option>
+    </select>
+    <br>
+    
+    <button onclick="createRhombus(document.getElementById('rHeight').value,
+    document.getElementById('colorEven').value,
+    document.getElementById('colorOdd').value,
+    document.getElementById('symbol').value);">Display Rhombus</button>
+
+    <!-- Create Div To Center Rhombus On The Screen -->
+    <div id="upLeft"></div>
+    <div id="upRight"></div>
+
+    <div class="clear"></div>
+
+    <div id="downLeft"></div>
+    <div id="downRight"></div>
+
+    <script src="rhombus.js"></script>
+
+  </body>
+</html>
