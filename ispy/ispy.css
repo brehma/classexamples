@@ -1,17 +1,35 @@
-h1,h3,p{
-  text-align:center;
-  color:#393D47;
+h1 {
+  text-align: center;
+  font-family: 'OddBallzRegular';
+  font-weight: bold;
+  color: firebrick;
+  border: 7px;
+  padding: 5px;
+  border-style: dotted;
 }
-body{
-  background-color:#FFE4E1;
+
+p {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  color: firebrick
 }
-button{
-  font-size:20px;
-  display:grid;
-  margin:auto;
-}
+
 img {
   display: block;
   margin-left: auto;
   margin-right: auto;
+}
+
+div { 
+  color: firebrick;
+  display: block;
+  background: bisque;
+  padding: 3px;
+  font-size: 15px;
+  text-align: center;
+  font-family: Tahoma, Verdana, sans-serif;
+}
+
+body {
+  background-color: lightsalmon;
 }
