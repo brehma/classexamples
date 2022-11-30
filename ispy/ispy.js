@@ -3,27 +3,25 @@ var Sun = document.getElementById("sun");
 var Tree = document.getElementById("tree");
 
 function foundPig(){
-    Pig.addEventListener("click", function(){
-        foundPig("pig");
-        Pig.style.textDecoration="line-through";
-    }, false);
+  document.getElementById("item1").style.textDecoration="line-through";
 }
+
+Pig.addEventListener("click", function(){
+  foundPig("Pig");
+}, false);
 
 function foundSun(){
-    Sun.addEventListener("click", function(){
-        foundSun("sun");
-        Sun.style.textDecoration="line-through";
-    }, false);
+  document.getElementById("item2").style.textDecoration="line-through";
 }
+
+Sun.addEventListener("click", function(){
+  foundSun("Sun");
+}, false);
 
 function foundTree(){
-    Tree.addEventListener("click", function(){
-        foundTree("tree");
-        Tree.style.textDecoration="line-through";
-    }, false);
+  document.getElementById("item3").style.textDecoration="line-through";
 }
 
-function replay(){
-    var map = document.getElementById("randommap");
-    map.reload();
-}
+Tree.addEventListener("click", function(){
+  foundTree("Tree");
+}, false);
