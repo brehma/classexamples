@@ -1,32 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>I Spy</title>
-  <link rel="stylesheet" type="text/css" href="ispy.css">
-</head>
-<body>
-  <h1>I Spy Game</h1>
-  
-  <h3>See if you can find the following object on the picture.Once you find them, click on them!</h3>
-  
-  <p>Pig</p>
-  <p>Sun</p>
-  <p>Tree</p>
-  
-  <img src="https://lh3.googleusercontent.com/proxy/9asiHhj_TkcllcNwSbYtVUu5qkIw8iSd6jmZlMvfMNeY4rkVJr7DqNqhUi76EKF2R3Pef-o6No_KxVOJrutWRqNr7Mxv6APFrANrTfJhw0U=w1200-h630-p-k-no-nu" alt="randommap" usemap="#randommap" width="500" height="500">
-  <map name="randommap">
-    <area shape="circle" alt="pig" id="pig" coords="68,355,34"  onclick="foundPig()">
-    <area shape="circle" alt="sun" id="sun"  coords="356,105,29" onclick="foundSun()">
-    <area shape="rect" alt="tree" id="tree" coords="87,240,42,167" onclick="foundTree()">
-  </map>
 
-  <br>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>I Spy</title>
+    <link rel="stylesheet" type="text/css" href="ispy.css">
+  </head>
   
-  <button type="button" onclick="replay()">Restart!</button>
-  
-  <script src="ispy.js"></script>
+  <body>
+    
+    <h1>I Spy Game</h1>
+
+    <h3>See if you can find the following object on the picture.Once you find them, click on them!</h3>
+
+    <div id="item1">Pig</div>
+    <div id="item2">Sun</div>
+    <div id="item3">Tree</div>
+
+    <img src="https://lh3.googleusercontent.com/proxy/9asiHhj_TkcllcNwSbYtVUu5qkIw8iSd6jmZlMvfMNeY4rkVJr7DqNqhUi76EKF2R3Pef-o6No_KxVOJrutWRqNr7Mxv6APFrANrTfJhw0U=w1200-h630-p-k-no-nu" alt="randommap" usemap="#randommap" width="500" height="500">
+    
+    <map name="randommap">
+      <area shape="circle" alt="pig" id="pig" coords="68,355,34" href="#">
+      <area shape="circle" alt="sun" id="sun" coords="356,105,29" href="#">
+      <area shape="rect" alt="tree" id="tree" coords="87,240,42,167" href="#">
+    </map>
+
+    <br>
+
+    <p><input type="button" onclick="document.location.reload(true)" value="Restart"!</p>
+
+    <script src="ispy.js"></script>
   
   </body>
+
 </html>
