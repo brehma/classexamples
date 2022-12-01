@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="UTF-8">
+    <meta name="description" content="Validate Contact Us Form using Javascript">
+    <meta name="keywords" content="HTML,CSS,js">
+    <meta name="author" content="Mengzhou Yao">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="https://myao3.github.io/mland/artifact04-1.css">  
+    <title>Contact Us</title>
+
+  </head>
+
+  <body>
+
+    <div class="form-box">
+
+      <h2>Contact Us </h2>
+      <form action="https://myao3.github.io/mland/artifact04-2.html" id="myform" onsubmit="return validateForm();" >
+        
+        <p>
+          <label for='FirstName'>First Name*:</label>
+          <input type="text" id="FirstName" name="FirstName" />
+        </p>
+        <div id="errorMessages1"></div>
+        
+        <p>
+          <label for='LastName'>Last Name*:</label>
+          <input type="text" id="LastName" name="LastName" />
+        </p>
+        <div id="errorMessages2"></div>
+        
+        <p>
+          <label for='EMail'>EMail*:</label>
+          <input type="text" id="EMail" name="EMail"/>
+        </p>
+        <div id="errorMessages3"></div>
+        
+        <p>
+          <label for='Phone'>Phone*:</label>
+          <input type="text" id="Phone" name="Phone"/>
+        </p>
+        <div id="errorMessages4"></div>
+        
+        <p>	
+          <label for='Username'>Username*:</label>
+          <input type="text" id="Username" name="Username" />
+        </p>
+        <div id="errorMessages5"></div>
+        
+        <p>
+          <label for='Password'>Password*:</label>
+          <input type="text" id="Password" name="Password" />
+        </p>
+        <div id="errorMessages6"></div>
+
+        <p>
+          <label for='Address'>Address*:</label>
+          <textarea cols="20" rows="5" id="Address" name="Address" ></textarea>
+        </p>
+        <div id="errorMessages7"></div>
+        
+        <p>
+          <label for='City'>City*:</label>
+          <input type="text" id="City" name="City"/>
+        </p>
+        <div id="errorMessages8"></div>
+        
+        <p>
+          <label for='State'>State*:</label>
+          <select id="State"  name="State">
+            <option value="000" selected="selected">[choose yours]</option>
+            <option value="AL">Alabama</option>
+            <option value="AK">Alaska</option>
+            <option value="AZ">Arizona</option>
+            <option value="AR">Arkansas</option>
+            <option value="CA">California</option>
+            <option value="CO">Colorado</option>
+            <option value="CT">Connecticut</option>
+            <option value="DE">Delaware</option>
+            <option value="DC">District Of Columbia</option>
+            <option value="FL">Florida</option>
+            <option value="GA">Georgia</option>
+            <option value="HI">Hawaii</option>
+            <option value="ID">Idaho</option>
+            <option value="IL">Illinois</option>
+            <option value="IN">Indiana</option>
+            <option value="IA">Iowa</option>
+            <option value="KS">Kansas</option>
+            <option value="KY">Kentucky</option>
+            <option value="LA">Louisiana</option>
+            <option value="ME">Maine</option>
+            <option value="MD">Maryland</option>
+            <option value="MA">Massachusetts</option>
+            <option value="MI">Michigan</option>
+            <option value="MN">Minnesota</option>
+            <option value="MS">Mississippi</option>
+            <option value="MO">Missouri</option>
+            <option value="MT">Montana</option>
+            <option value="NE">Nebraska</option>
+            <option value="NV">Nevada</option>
+            <option value="NH">New Hampshire</option>
+            <option value="NJ">New Jersey</option>
+            <option value="NM">New Mexico</option>
+            <option value="NY">New York</option>
+            <option value="NC">North Carolina</option>
+            <option value="ND">North Dakota</option>
+            <option value="OH">Ohio</option>
+            <option value="OK">Oklahoma</option>
+            <option value="OR">Oregon</option>
+            <option value="PA">Pennsylvania</option>
+            <option value="RI">Rhode Island</option>
+            <option value="SC">South Carolina</option>
+            <option value="SD">South Dakota</option>
+            <option value="TN">Tennessee</option>
+            <option value="TX">Texas</option>
+            <option value="UT">Utah</option>
+            <option value="VT">Vermont</option>
+            <option value="VA">Virginia</option>
+            <option value="WA">Washington</option>
+            <option value="WV">West Virginia</option>
+            <option value="WI">Wisconsin</option>
+            <option value="WY">Wyoming</option>
+            <option value="Others">Others</option>
+          </select>
+        </p>
+        <div id="errorMessages9"></div>
+
+        <p>
+          <label for='Country'>Country*:</label>
+          <select id="Country"  name="Country">
+            <option value="000" selected="selected">[choose yours]</option>
+            <option value="CAN">Canada</option>
+            <option value="USA">United States</option>
+            <option value="MEX">Mexico</option>
+          </select>
+        </p>
+        <div id="errorMessages10"></div>
+        
+        <p>
+          <label for='Zipcode'>Zip Code:</label>
+          <input type="text" id="Zipcode" name="Zipcode"/>
+        </p>
+        <div id="errorMessages11"></div>
+        
+        <p>
+          <label for='Comments'>Comments:</label>
+          <textarea cols="20" rows="8" id="Comments" name="Comments"></textarea>
+        </p>	
+        
+        <p>* required</p>
+        
+        <p>
+          <input type="submit" name="submit" value="Submit"/>
+        </p>
+      
+      </form>
+
+      <script src="https://myao3.github.io/mland/artifact04.js"></script>
+
+      <p><a href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fmyao3.github.io%2Fmland%2Fartifact04.html" target="_blank">W3C validator</a><br>
+      <a href="https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fmyao3.github.io%2Fmland%2Fartifact04-1.css&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en" target="_blank">CSS Validator</a></p>
+      
+      </div>
+    
+    </body>
+  
+</html>
