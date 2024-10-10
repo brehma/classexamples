@@ -28,7 +28,7 @@ function sortSites(sites) {
 
 // Function to display sites
 function displaySites(sites) {
-    const sitesDiv = document.getElementById('sites');
+    const sitesDiv = document.getElementById('listsites');
     sitesDiv.innerHTML = ''; // Clear previous results
     sites.forEach(site => {
         const siteDiv = document.createElement('div');
