@@ -71,7 +71,7 @@ function displaySites(sites) {
 // Event listener for the button
 document.getElementById('getSites').addEventListener('click', () => {
     getAPI().then(sites => {
-        const sortedSites = sortSitesByName(sites);
+        const sortedSites = sortSites(sites);
         displaySites(sortedSites); // Display sorted sites
     });
 });
