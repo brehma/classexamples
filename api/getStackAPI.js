@@ -39,13 +39,13 @@ function displaySites(sites) {
 }
 
 // Event listener for the button
-document.getElementById('getSites').addEventListener('click');
-    /*, () => {
-    getAPI().then(sites => {
-        const sortedSites = sortSitesByName(sites);
-        displaySites(sortedSites); // Display sorted sites
-    });
-});*/
+document.getElementById('getSites').addEventListener('click') () => {
+    getAPI().then(displaySites(sites);
+        //sites => {
+//        const sortedSites = sortSitesByName(sites);
+//        displaySites(sortedSites); // Display sorted sites
+//    });
+});
     
 // Call the function
 getAPI();
