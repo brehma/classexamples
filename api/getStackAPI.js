@@ -40,9 +40,10 @@ function displaySites(sites) {
 }
 
 // Event listener for the button
-document.addEventListener('click', getAPI() {
-        displaySites(sites);
-    )};
+document.addEventListener('click', () => {
+    getAPI();
+    displaySites(sites);
+});
         //sites => {
 //        const sortedSites = sortSites(sites);
 //        displaySites(sortedSites); // Display sorted sites
