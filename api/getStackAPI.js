@@ -20,10 +20,11 @@ async function getAPI() {
     } catch (error) {
         console.error('Error fetching Stack Exchange sites:', error);
     }
+    document.getElementById('getSites');
 }
 
 function sortSites(sites) {
-    return sites.sort((a,b) => (a.name.localeCompare(b.name));
+    return sites.sort((a,b) => (a.name.localeCompare(b.name)));
 }
 
 // Function to display sites
@@ -39,13 +40,14 @@ function displaySites(sites) {
 }
 
 // Event listener for the button
-document.getElementById('getSites').addEventListener('click') () => {
-    getAPI().then(displaySites(sites);
+document.addEventListener('click', getAPI() {
+        displaySites(sites);
+    )};
         //sites => {
-//        const sortedSites = sortSitesByName(sites);
+//        const sortedSites = sortSites(sites);
 //        displaySites(sortedSites); // Display sorted sites
 //    });
-});
+//});
     
 // Call the function
 getAPI();
