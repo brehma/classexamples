@@ -1,7 +1,7 @@
-document.addEventListener(click, () => {
-  // Define API URL with the provided filter
-  const apiUrl = 'https://api.stackexchange.com/2.3/sites?filter=!)QnLLt9nPppdTlUqmH7KDCDW'; 
+// Define API URL with the provided filter
+const apiUrl = 'https://api.stackexchange.com/2.3/sites?filter=!)QnLLt9nPppdTlUqmH7KDCDW'; 
 
+document.addEventListener('click', () => {
   // Fetch data from Stack Exchange API
   async function getAPI() {
     try {
@@ -18,19 +18,21 @@ document.addEventListener(click, () => {
         console.log(stackSites);
 
         return stackSites;
+
+        // Function to display sites
+        function displaySites(sites) {
+            const sitesDiv = document.getElementById('listsites');
+            sitesDiv.innerHTML = ''; // Clear previous results
+            sites.forEach(site => {
+                const siteDiv = document.createElement('div');
+                siteDiv.className = 'site';
+                siteDiv.textContent = site.name; // Display site name
+                sitesDiv.appendChild(siteDiv);
+            });
+        }      
     } catch (error) {
         console.error('Error fetching Stack Exchange sites:', error);
     }
-    // Function to display sites
-    function displaySites(sites) {
-        const sitesDiv = document.getElementById('listsites');
-        sitesDiv.innerHTML = ''; // Clear previous results
-        sites.forEach(site => {
-            const siteDiv = document.createElement('div');
-            siteDiv.className = 'site';
-            siteDiv.textContent = site.name; // Display site name
-            sitesDiv.appendChild(siteDiv);
-        });
-    }
+
   }
 });
