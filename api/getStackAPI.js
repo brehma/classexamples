@@ -42,7 +42,7 @@ function displaySites(sites) {
 // Event listener for the button
 document.addEventListener('click', () => {
     getAPI();
-    displaySites(sites);
+    displaySites(stackSites);
 });
         //sites => {
 //        const sortedSites = sortSites(sites);
