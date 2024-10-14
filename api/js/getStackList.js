@@ -19,7 +19,7 @@ async function getAPI() {
       return stackSites;
 
       // Function to display sites
-      function displaySites(sites) {
+      function displaySites(stackSites) {
           const sitesDiv = document.getElementById('listsites');
           sitesDiv.innerHTML = ''; // Clear previous results
           sites.forEach(site => {
