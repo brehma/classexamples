@@ -26,3 +26,6 @@ async function getAPI() {
   }
 }
 
+document.addEventListener('click', () => {
+  getAPI();
+});
