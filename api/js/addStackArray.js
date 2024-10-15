@@ -17,9 +17,9 @@ async function getAPI() {
       stackoverflowSites = data.items;
 
       // Output the variable (or use it as needed)
-      console.log(stackoverflowSites);
+      //console.log(stackoverflowSites);
     
-      displaySite(stackoverflowSites);
+      displaySites(stackoverflowSites);
 
   } catch (error) {
       console.error('Error fetching Stack Exchange sites:', error);
