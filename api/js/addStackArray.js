@@ -20,6 +20,9 @@ async function getAPI() {
       console.log(stackoverflowSites);
     
       return stackoverflowSites;
+
+  } catch (error) {
+      console.error('Error fetching Stack Exchange sites:', error);
   }
 }
 
