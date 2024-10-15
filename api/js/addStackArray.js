@@ -2,7 +2,7 @@
 const apiUrl = 'https://api.stackexchange.com/2.3/sites?filter=!)QnLLt9nPppdTlUqmH7KDCDW';
 
 // Define array of Stackoverflow Sites
-var stackoverflowSites = [];
+let stackoverflowSites = [];
 
 // Fetch data from Stack Exchange API
 async function getAPI() {
@@ -19,13 +19,25 @@ async function getAPI() {
       // Output the variable (or use it as needed)
       console.log(stackoverflowSites);
     
-      return stackoverflowSites;
+      displaySite(stackoverflowSites);
 
   } catch (error) {
       console.error('Error fetching Stack Exchange sites:', error);
   }
 }
 
-document.addEventListener('click', () => {
+// Function to display sites
+function displaySites(sites) {
+    const sitesDiv = document.getElementById('sites');
+    sitesDiv.innerHTML = ''; // Clear previous results
+    sites.forEach(site => {
+        const siteDiv = document.createElement('div');
+        siteDiv.className = 'site';
+        siteDiv.textContent = site.name; // Display site name
+        sitesDiv.appendChild(siteDiv);
+    });
+}
+
+document.getElementById('getsites').addEventListener('click', () => {
   getAPI();
 });
