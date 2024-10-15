@@ -38,6 +38,6 @@ function displaySites(sites) {
     });
 }
 
-document.getElementById('getsites').addEventListener('click', () => {
+document.getElementById('getSites').addEventListener('click', () => {
   getAPI();
 });
