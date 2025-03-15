@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+
+    <meta name="Viewport" content="width=device-width">
+    <meta name="description" content="Cary's World and interests" />
+    <meta name="keywords" content="Cary, Programmer, Spacecraft, USAF Officer" />
+
+    <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/kolar" type="text/css" />
+
+    <link rel="stylesheet" type="text/css" href="ProjectStyleSheet.css" />
+
+    <title>Home</title>  <!-- This is the home page for the portfolio project-->
+
+</head>
+
+<body>
+    <div id="FlexWrapper">
+
+        <div id="topmenu">
+
+            <ul>
+                <li><a href="index.html" tabindex="1">Home</a></li>
+                <li><a href="About.html" tabindex="2">About</a></li>
+                <li><a href="Coursework.html" tabindex="3">Coursework</a></li>
+                <li><a href="Artifacts.html" tabindex="4">Artifacts</a></li>
+                <li><a href="ModuleAssignments.html" tabindex="5">Module Assignments</a></li>
+                <li><a href="ContactMe.html" tabindex="6">Contact Me</a></li>
+                <li><a href="PersonalInterests.html" tabindex="7">Personal Interests</a></li>
+            </ul>
+
+            <!--
+                    <div class="search">
+                        <input type="text" style="width:220px" />
+                        <input type="submit" value="Search" />
+                    </div>
+            -->
+
+        </div>  <!-- end div Top Menu -->
+
+
+        <div id="myHeader" tabindex="8">Cary Gibson: Personal Portfolio</div>
+
+
+        <button id="HomeAudioButton" tabindex="9">Audio On</button>
+
+
+        <div class="MainTextClass" id="HomeMainText" tabindex="10">
+            Welcome to my site!  &nbsp; I hope you enjoy it. <br />
+            The reason this site exists is because of the requirements of the Programming 109 class. &nbsp;
+            As a result, the menu items above are prescribed by the class requirements.  &nbsp; "About" is of course, a bit about me; &nbsp;"Coursework"
+            is about the Programming 109 course here at Bellevue College; &nbsp;"Artifacts" page holds a few of the interesting
+            pages I've created for the class; &nbsp;"Module Assignments" is a listing of the Programming 109 assignments, with links to each of them;
+            &nbsp;"Contact Me" is, as you suspect, a way to contact me, well not really but it is a form that seems to look that way, with validation;
+            &nbsp;and finally, "Personal Interests" shows a few of my interests with links etc. <br />
+            Even though the site is a class requirement, I have decided to give it a bit of personal flair :-) <br />
+            OH! &nbsp;  Be sure to press the Audio button. &nbsp; In addition to the sound, it triggers a 1.5 minute
+            animation which shows up a few seconds after the screen clears. &nbsp; Don't miss it! <br />
+            This current version was completed on March 19,2019.
+        </div>
+
+
+    </div> <!-- end FlexWrapper Div-->
+
+    <div id="Enterprise"></div>
+
+    <div id="WarpStar"></div>
+
+    <div id="DeepSpace9"></div>
+    <div id="SunInSpace"></div>
+
+    <div id="EndOrion"></div>
+
+
+    <canvas id="WarpStarfield" width="800" height="500"></canvas>
+
+
+    <div class="MainTextClass" id="FlexFooter">
+
+        <div class="Validators">
+            <a href="https://jigsaw.w3.org/css-validator/check/referer">
+                <img style="border:0;width:60px;height:22px" src="https://jigsaw.w3.org/css-validator/images/vcss-blue" alt="Valid CSS!" />
+            </a>
+        </div>
+
+        <div class="Validators">
+            <a href="https://validator.w3.org/check?uri=referer">
+                <img src="https://www.w3.org/Icons/valid-xhtml10" alt="Valid XHTML 1.0 Strict" height="22" width="60" />
+            </a>
+
+        </div> <!-- end div Validators -->
+
+        <div class="DateDisplay"></div>
+
+    </div> <!-- end div MyFooter -->
+    <!-- Audio elements example since I can't get both mp3 and ogg to work on the fly.. -->
+    <audio id="MainAudio">
+        <source src="Audio/Star_Trek_2009_Original_Theme_720p.mp3" type="audio/mpeg">
+        <!--  <source src="audio/PhotonTorp.ogg" type="audio/ogg"> -->
+    </audio>
+    <!--
+    <audio id="ExplosionSound">
+        <source src="audio/Explosion.mp3" type="audio/mpeg">
+        <source src="audio/Explosion.ogg" type="audio/ogg">
+    </audio>
+    -->
+    <!-- Link in the tween max stuff -->
+    <script src="TweenMax.min.js"></script>
+
+    <!-- my new Starfield stuff -->
+    <script src="js/StarfieldJavaScript.js"></script>
+
+    <!-- now the main js stuff. -->
+    <script src="js/ProjectHomeJavaScript.js"></script>
+
+    <!-- Date time updater -->
+    <script src="js/ProjectDateTimeScript.js"></script>
+
+
+</body>
+</html>
