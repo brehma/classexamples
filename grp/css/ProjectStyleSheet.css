@@ -1,0 +1,742 @@
+/* Make sure older browsers at least display the new stuff as block */
+header, section, footer, aside, nave, article, figure, figcaption {
+    display: block;
+}
+
+/************************************************************************************************
+*************  ALL Page Related **********************************************************
+*************************************************************************************************
+*/
+
+/*body, html {
+    height: 100%;*/
+    /* margin 0 keeps from having a scroll bar outside of main content wrapper */
+    /*margin: 0px;
+    font-family: 'KolarRegular';
+    font-weight: normal;
+    font-style: normal;
+}*/
+
+html {
+    background: url("Images/OrionNebula_cropped_1400.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-color:black;
+}
+
+/* flex attempt */
+body {
+    font-family: 'KolarRegular';
+    font-weight: normal;
+    font-style: normal;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    margin: 0px 0px 0px 0px;
+}
+
+#FlexWrapper {
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    padding: 0px 0px 0px 0px;
+    flex: 1 1 auto;
+    /* note need a top margin => to menu height + border*/
+    margin: 41px 0px 46px 0px;
+    /*border:5px solid red;*/
+}
+
+#FlexFooter {
+    position:fixed;
+    display:block;
+    text-align: right;
+    font-size: 12px;
+    height: 34px;
+    min-height: 34px;
+    width: 98%;
+    bottom: 0px;
+    margin: 0% 0% 0% 0%;
+}
+
+
+#topmenu {
+    /* set position to fixed to keep showing during scroll.  Sadly this eliminates
+        the ability to center via margins as the left side is messed up and if you
+        try to use margins, it seems to have an auto +1% or 2% to the left if you 
+        set the left to anything! 100% width pushes the border over the edge of the
+        right side of the view pane so doing a bit less as a "close enough".
+    */
+    position:fixed;
+    top: 0px;
+    left: 0px;
+    width: 99.3%;
+    padding: 8px 0px 0px 0px;
+    height: 30px;
+    min-height: 30px;
+    overflow: auto;
+    background: rgbA(0, 0, 200, 0.5);
+    border: 5px inset blue;
+    margin:0% 0% 0% 0%;
+}
+
+    #topmenu ul {
+        margin: 0px;
+        padding: 0px;
+        list-style-type: none;
+    }
+
+        #topmenu ul:first-child {
+            padding: 0px 20px 0px 20px;
+        }
+
+
+
+    #topmenu li {
+        float: left;
+        padding: 0px 20px 0px 0px;
+    }
+
+
+
+
+        #topmenu li a {
+            display: block;
+            text-decoration: none;
+        }
+
+/*make top menue always show up nice.*/
+ #topmenu a:visited {
+        color: aqua;
+    }
+
+
+/*.search {
+    padding: 0px 20px 0px 5px;
+    display: block;
+    float: right;
+}*/
+
+
+/*make all the text links show up better*/
+a:link {
+    color: aqua;
+}
+
+a:visited {
+    color: rgb(150, 0, 150);
+}
+
+a:hover {
+    color: hotpink;
+}
+
+a:active {
+    color: red;
+}
+
+
+
+
+#myHeader {
+    font-size: 36px;
+    color: aqua; /*  #99f2ff;*/
+    text-align: center;
+    margin: 20px 0px 0px 0px;
+}
+
+/*  Main Text class: see specific pages for page related mods */
+.MainTextClass {
+    display: block;
+    color: aqua; /*  #99f2ff;*/
+    text-align: left;
+    background-color: rgbA(0, 0, 200, 0.5);
+    font-family: 'KolarRegular';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 1.25vw; /* dynamic sizing: a vw is 1% of current viewport width */
+    width: 35%;
+    padding: 0px 10px 0px 10px;
+    text-shadow: 1px 1px 1px rgb(0,0,0);
+    margin: 1% 0% 0% 1%;
+    border: 5px inset blue;
+}
+
+
+.Validators {
+    display: block;
+    position: relative;
+    float: left;
+    margin: 6px 0px 0px 10px;
+}
+
+
+.DateDisplay {
+    display: inline;
+    position: relative;
+    /*float: left;*/
+    margin: 0px 20px 0px 0px;
+}
+
+
+
+
+/************************************************************************************************
+*************  Home Page Related ****************************************************************
+*************************************************************************************************
+*/
+
+/* use css animation for button background color changes */
+#HomeAudioButton {
+    display: block;
+    margin: 0% 0% 1% 1%;
+    color: aqua;
+    background-color: rgbA(0, 0, 0, 0);
+    animation-name: redAlert;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    width: 100px;
+    height: 30px;
+    font-size: 16px;
+    font-weight: 600;
+    text-shadow: 1px 1px 1px rgb(0,0,0);
+}
+
+
+/* standard animation tag*/
+@keyframes redAlert {
+    /* cycle from transparent to our std semi transparent blue to red and back continuously*/
+    0% {
+        background-color: rgbA(0, 0, 0, 0);
+    }
+
+    25% {
+        background-color: rgbA(0, 0, 200, 0.5);
+    }
+
+    50% {
+        background-color: rgbA(255, 0, 0, 1);
+    }
+
+    75% {
+        background-color: rgbA(0, 0, 200, 0.5);
+    }
+
+    100% {
+        background-color: rgbA(0, 0, 0, 0);
+    }
+}
+/* end of redAlert animation */
+
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes redAlert {
+    /* cycle from transparent to our std semi transparent blue to red and back continuously*/
+    0% {
+        background-color: rgbA(0, 0, 0, 0);
+    }
+
+    25% {
+        background-color: rgbA(0, 0, 200, 0.5);
+    }
+
+    50% {
+        background-color: rgbA(255, 0, 0, 1);
+    }
+
+    75% {
+        background-color: rgbA(0, 0, 200, 0.5);
+    }
+
+    100% {
+        background-color: rgbA(0, 0, 0, 0);
+    }
+} /*end webkit version*/
+
+
+
+#Enterprise {
+    position: absolute;
+    background: no-repeat;
+    top: 125px;
+    left: 0px;
+    width: 600px;
+    height: 330px;
+    background-position: center;
+    background-size: 600px 330px;
+    opacity: 0;
+    z-index: 10;
+    display:none;
+}
+
+
+#WarpStar {
+    position: absolute;
+    background: no-repeat;
+    top: 240px;
+    left: 275px;
+    width: 50px;
+    height: 50px;
+    background-image: url("Images/WarpStarWT.png");
+    background-position: center;
+    background-size: 50px 50px;
+    opacity: 0;
+    z-index: 10;
+    display: none;
+}
+
+
+#WarpStarfield {
+    position: absolute;
+    top: 100px;
+    left:150px;
+    /*border: 5px inset blue;*/
+    opacity: 0;
+}
+
+
+#DeepSpace9 {
+    position: absolute;
+    background: no-repeat;
+    top: 100px;
+    left: 100px;
+    width: 800px;
+    height: 600px;
+    background-position: center;
+    background-size: 800px 600px;
+    opacity: 0;
+    z-index: 10;
+    display: none;
+}
+
+#EndOrion {
+    position: absolute;
+    background: no-repeat;
+    top: 50px;
+    left: 100px;
+    width: 1000px;
+    height: 700px;
+    background-image: url("Images/OrionNebula_cropped_1400.jpg");
+    background-position: center;
+    background-size: 1000px 700px;
+    /*border: 5px solid red;*/
+    opacity: 0;
+    z-index: 10;
+    display: none;
+}
+
+
+#SunInSpace {
+    position: absolute;
+    background: no-repeat;
+    top: 100px;
+    left: -1000px;
+    width: 500px;
+    height: 500px;
+    background-image: url("Images/SunMostlyTrans.png");
+    background-position: center;
+    background-size: 500px 500px;
+    /*border: 5px solid red;*/
+    opacity: 0;
+    z-index: 10;
+    display: none;
+}
+/************************************************************************************************
+*************  About Page Related ***************************************************************
+*************************************************************************************************
+*/
+#AboutText {
+    width: 50%;
+    margin: 1% 25% 0% 25%;
+}
+
+
+
+/************************************************************************************************
+*************  Coursework Page Related **********************************************************
+*************************************************************************************************
+*/
+#CourseText {
+    width: 50%;
+    margin: 1% 25% 0% 25%;
+}
+
+
+/************************************************************************************************
+*************  Artifacts Page Related ***********************************************************
+*************************************************************************************************
+*/
+
+
+#ArtifactsContainer {
+    display: block;
+    position: relative;
+    top: 15%;
+    width: 80%;
+    height: 50%;
+    margin: 0 auto 0 auto;
+}
+
+
+.Artifacts {
+    display: block;
+    float: left;
+    width: 18%;
+    height: 100%;
+    padding: 0% 1% 0% 1%;
+}
+
+
+    .Artifacts img {
+        width: 100%;
+        height: 50%;
+        border: 5px inset blue;
+    }
+
+    .Artifacts p {
+        background-color: rgbA(0, 0, 200, 0.5);
+        font-family: 'KolarRegular';
+        font-weight: normal;
+        font-style: normal;
+        font-size: 1.25vw; /* dynamic sizing: a vw is 1% of current viewport width */
+        width: 100%;
+        border: 5px inset blue;
+    }
+
+
+
+/************************************************************************************************
+*************  Module Assignments Page Related **************************************************
+*************************************************************************************************
+*/
+#ModuleText {
+    width: 25%;
+    float: left;
+}
+
+
+#AssignmentList {
+    width: 45%;
+    padding: 0px 0px 0px 10px;
+    float: left;
+    margin: 10px 0px 0px 50px;
+}
+
+
+#AssignmentList p {
+    display: block;
+    margin: 0.5% 0.5% 0% 0.5%;
+}
+
+
+
+/************************************************************************************************
+*************  Contact Me Page Related **********************************************************
+*************************************************************************************************
+*/
+
+#ValForm {
+    margin: 5% 0% 0% 0%;
+    /*border: 5px solid green;*/
+}
+
+fieldset#ContactingMeInfo {
+    position: relative;
+    background-color: rgbA(0, 0, 200, 0.5);
+    border: 5px inset blue;
+    width: 60%;
+    min-width: 550px;
+    max-width: 800px;
+    color: aqua;
+    margin: 0 auto 0 auto;
+    text-shadow: 1px 1px 0px black; /* horizontal, virt, blur, color */
+}
+
+
+#ContactingMeInfo label {
+    clear: left;
+    display: block;
+    float: left;
+    font-size: 0.9em;
+    margin: 7px 2% 7px 5px;
+    width: 20%;
+}
+
+
+#ContactingMeInfo input {
+    display: block;
+    float: left;
+    font-size: 0.9em;
+    margin: 7px 0px;
+    width: 75%;
+
+}
+
+
+#ContactingMeInfo textarea {
+    display: block;
+    float: left;
+    font-size: 0.9em;
+    margin: 7px 0px;
+    width: 75%;
+    height: 100px;
+}
+
+#ContactingMeInfo .ErrorMsg {
+    display: block;
+    float: left;
+    font-size: 0.9em;
+    margin: 7px 0px;
+    color: red;
+    width: 75%;
+    text-shadow: 1px 1px 0px black; /* horizontal, virt, blur, color */
+    /*visibility: hidden;*/
+}
+
+#ContactingMeInfo #CommentError {
+    margin-left: 24%;
+}
+
+
+#ContactSubmit input {
+    clear: left;
+    display: block;
+    float: left;
+    font-size: 0.9em;
+    margin: 7px 2% 7px 5px;
+    width: 20%;
+}
+
+
+/* ************************************************************************************************
+ *************************** Personal Interest Page  **********************************************
+***************************************************************************************************
+*/
+
+#PersonalText {
+    width: 25%;
+    clear: left;
+    float: left;
+}
+
+
+
+#PersonalHomeAudioButton {
+    display: block;
+    margin: 0% 0% 1% 1%;
+    color: aqua;
+    background-color: rgbA(0, 0, 0, 0);
+    animation-name: redAlert;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    width: 150px;
+    height: 30px;
+    font-size: 16px;
+    font-weight: 600;
+    text-shadow: 1px 1px 1px rgb(0,0,0);
+    float: left;
+
+}
+
+
+/* ***************************************************************
+ ****************** Galactic Cruise Lines ************************
+*/
+#GalacticCruise {
+    display: block;
+    position: relative;
+    top: 0%;
+    width: 10%;
+    height: 50px;
+    margin: 0% 0% 0% 1%;
+    text-align: center;
+    float: left;
+    border: 5px inset blue;
+}
+
+    #GalacticCruise a {
+        display: block;
+        font-family: 'KolarRegular';
+        font-weight: normal;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 1.0vw; /* dynamic sizing: a vw is 1% of current viewport width */
+        text-shadow: 1px 1px 1px rgb(0,0,0);
+        background-color: rgbA(0, 0, 200, 0.5);
+        background-image: url(Images/LuxLiner4.jpg);
+        background-position: center;
+        background-size: cover;
+        width: 100%;
+        height: inherit;
+        z-index: 5;
+    }
+
+
+
+/* ************************************************************************************************
+ *************************** Personal Interest Page Slide Shows ***********************************
+***************************************************************************************************
+*/
+#SpacecraftPictures {
+    /*width:  300px;  
+    height: 312px;*/
+    width: 300px;
+    height: 240px;
+    float: left;
+    margin: 1% 2% 0% 3%;
+    /*border: 5px solid red;*/
+}
+
+
+#SpaceMainFigure {
+    margin: 0px auto;
+    /*width: 100%;
+    height: 100%;*/
+    /*border: 5px solid orange;*/
+}
+
+
+#SpaceMainSlide {
+    display: block;
+    width:  300px;
+    height: 170px;
+    /*width: 100%;
+    height: 75%;*/
+    border: 5px inset blue;
+    margin: 0px auto;
+}
+
+#SpaceMainCaption {
+    font-size: 20px;
+    font-style: italic;
+    color: aqua;
+    background-color: rgbA(0, 0, 200, 0.5);
+    font-family: 'KolarRegular';
+    font-weight: normal;
+    font-size: 1.25vw; /* dynamic sizing: a vw is 1% of current viewport width */
+    text-align: center;
+    text-shadow: 1px 1px 1px rgb(0,0,0);
+    margin: 0px auto;
+    width: 300px;
+    /*width: 100%;*/
+    border: 5px inset blue;
+}
+
+
+
+#SpaceButtonDiv {
+    width: 300px;
+    text-align: center;
+    /*border: 5pt solid green;*/
+}
+
+
+/* Make sure the fade time === the java script interval timer time! */
+.myfading {
+    animation: fading 6s infinite
+}
+
+
+
+@keyframes fading {
+    0% {
+        opacity: 0
+    }
+
+    50% {
+        opacity: 1
+    }
+
+    100% {
+        opacity: 0
+    }
+}
+
+
+/* ***************************************************************
+    ******************* Launch Video *****************************
+*/
+
+#PersonalPageVideoContainer {
+    width: 310px;
+    height: 220px;
+    float: left;
+    margin: 1% 0% 0% 2%;
+    /*border: 5px solid red;*/
+}
+
+
+#TheVideo {
+    display: block;
+    width: 300px;
+    height: 169px;
+    border: 5px inset blue;
+    margin: 0% 0% 0% 0%;
+}
+
+
+
+#PersonalPageVideoContainer p {
+    font-size: 20px;
+    font-style: italic;
+    color: aqua;
+    background-color: rgbA(0, 0, 200, 0.5);
+    font-family: 'KolarRegular';
+    font-weight: normal;
+    font-size: 1.25vw; /* dynamic sizing: a vw is 1% of current viewport width */
+    text-align: center;
+    text-shadow: 1px 1px 1px rgb(0,0,0);
+    margin: 0% 0% 0% 0%;
+    width: 300px;
+    border: 5px inset blue;
+}
+
+
+
+
+/* ***************************************************************
+ ****************** Scuba Pictures *******************************
+*/
+
+#ScubaPictures{
+    display: block;
+    float: left;
+    width: 60%;
+    height: 200px;
+    margin: 5% 0% 0% 4%;
+    /*border:5px solid orange;*/
+}
+
+    #ScubaPictures figure {
+        display: block;
+        position: relative;
+        width: 20%;
+        height: 100%;
+        float: left;
+        margin: 0% 0% 0% 5%;
+        /*border: 5px solid green;*/
+    }
+
+    #ScubaPictures img {
+        display: block;
+        position: relative;
+        width: 100%;
+        height: 60%;
+        border: 5px inset blue;
+    }
+
+    #ScubaPictures figcaption {
+        font-size: 20px;
+        font-style: italic;
+        color: aqua;
+        background-color: rgbA(0, 0, 200, 0.5);
+        font-family: 'KolarRegular';
+        font-weight: normal;
+        font-size: 1.25vw; /* dynamic sizing: a vw is 1% of current viewport width */
+        text-align: center;
+        text-shadow: 1px 1px 1px rgb(0,0,0);
+        margin: 0% 0% 0% 0%;
+        width: 100%;
+        border: 5px inset blue;
+    }
