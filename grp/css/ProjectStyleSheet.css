@@ -328,6 +328,14 @@ a:active {
 }
 
 
+#Authors {
+    position: absolute;
+    background-color: D9954D;
+    border-color: 800080;
+    border: 20px;
+}
+
+
 #SunInSpace {
     position: absolute;
     background: no-repeat;
