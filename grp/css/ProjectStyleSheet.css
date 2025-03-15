@@ -329,9 +329,8 @@ a:active {
 
 
 #Authors {
-    position: absolute;
-    background-color: D9954D;
-    border-color: 800080;
+    color: D9954D;
+    border-color: pink;
     border: 20px;
     margin: 50px;
     padding: 20px;
