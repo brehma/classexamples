@@ -144,6 +144,7 @@ a:active {
     color: aqua; /*  #99f2ff;*/
     text-align: center;
     margin: 20px 0px 0px 0px;
+    border-width: 3px;
 }
 
 /*  Main Text class: see specific pages for page related mods */
